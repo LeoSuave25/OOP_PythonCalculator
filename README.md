@@ -24,3 +24,7 @@ To run this program, you will need Python 3 and `Pyfiglet` library installed on 
 Leoj M. Suaverdez
 
 ## Demo
+
+
+https://github.com/LeoSuave25/OOP_PythonCalculator/assets/129582854/82e8be7f-cdb5-467e-8cb9-591bc8c34460
+
