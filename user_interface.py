@@ -11,12 +11,20 @@ class UserInterface:
         }
 # Make an input method
     def first_number_input(self):
-        first_number = float(input("Enter the first number: "))
-        return first_number
+        while True:
+            try:
+                first_number = float(input("Enter the first number: "))
+                return first_number
+            except ValueError:
+                print(f"\033[1;31mInvalid input. Please enter a valid number.\033[0m")
 
     def second_number_input(self):
-        second_number = float(input("Enter the second number: "))
-        return second_number
+        while True:
+            try:
+                second_number = float(input("Enter the second number: "))
+                return second_number
+            except ValueError:
+                print(f"\033[1;31mInvalid input. Please enter a valid number.\033[0m")
 # Make a retry method
     def retry(self):
         while True:
