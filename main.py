@@ -1,10 +1,12 @@
 from calculator_functions import Calculator
 from user_interface import UserInterface
 from style import Styling
+from add_UI_functions import UpdatedUserInterface
 
 header = Styling()
 user_input = UserInterface()
 calculator_initialize = Calculator()
+update_UI = UpdatedUserInterface()
 
 while True:
     operation_name, operation_function = user_input.operation_picker()
@@ -14,10 +16,9 @@ while True:
     first_number = user_input.first_number_input()
     second_number = user_input.second_number_input()
     try:
-        print(f"\033[1;34mResult: {operation_function(first_number,second_number)}\033[0m")
-    except ZeroDivisionError:
-        print("\033[1;31mError: division by zero!\033[0m")
-        continue
+        update_UI.print_result(operation_function,first_number,second_number)
+    except:
+        pass
     response = user_input.retry()
     if response == False:
         break
