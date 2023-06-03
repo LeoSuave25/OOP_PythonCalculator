@@ -15,10 +15,9 @@ while True:
 
     first_number = user_input.first_number_input()
     second_number = user_input.second_number_input()
-    try:
-        update_UI.print_result(operation_function,first_number,second_number)
-    except:
-        pass
+
+    update_UI.print_result(operation_function,first_number,second_number)
+    
     response = user_input.retry()
     if response == False:
         break
