@@ -1,8 +1,8 @@
 from calculator_functions import Calculator
-
+from override_calculator_functions import UpdatedCalculator
 class UserInterface:
     def __init__(self):
-        self.calcu_operators = Calculator()
+        self.calcu_operators = UpdatedCalculator()
         self.operations = {
             1: ("Addition", self.calcu_operators.add),
             2: ("Subtraction", self.calcu_operators.subtract),
